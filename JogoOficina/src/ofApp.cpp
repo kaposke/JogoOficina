@@ -4,22 +4,22 @@
 void ofApp::setup(){
 	ofSetVerticalSync(false);
 
-	//Player Setup
-	player = new Player();
-	player->setPosition(ofGetWidth()/2, ofGetHeight()/2);
-	player->setSpeed(1000);
-
 	//Camera Setup
-	camera = new Camera(600,600);
+	camera = new Camera(ofGetScreenHeight()/2, ofGetScreenHeight() / 2);
 
 	//Map Setup
-	map = new Map("maps/fase.png", ofGetScreenHeight(), ofGetScreenHeight());
+	string mapa = "video";
+	map = new Map("maps/"+ mapa+".png", ofGetScreenHeight(), ofGetScreenHeight());
 	map->init();
 	map->setPosition(ofGetScreenWidth()/2 - map->getWidth()/2, ofGetScreenHeight()/2 - map->getHeight()/2);
-	map->setBehaviours("bin/data/maps/fase.txt",16,16);
+	map->setBehaviours("bin/data/maps/"+mapa+".txt",16,16);
+
+	//Player Setup
+	player = new Player(*map);
+	player->setSpeed(1000);
 
 	//World
-	world = new World();
+	world = new World(*map);
 }
 
 //--------------------------------------------------------------
@@ -36,8 +36,9 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 	map->draw(camera->getPosition());
-	world->draw(camera->getPosition());
+	
 	player->draw(camera->getPosition());
+	world->draw(camera->getPosition());
 }
 
 //--------------------------------------------------------------

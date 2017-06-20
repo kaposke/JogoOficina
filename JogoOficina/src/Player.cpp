@@ -1,8 +1,21 @@
 #include "Player.h"
 
-Player::Player()
+Player::Player(Map &map)
 {
-	radius = 30;
+	for (int y = 0; y < map.getGridWidth(); y++)
+	{
+		for (int x = 0; x < map.getGridHeight(); x++)
+		{
+			if (map.getBehaviour(x, y) == 3)
+			{
+				position.set(map.getPosition().x + x * map.getTileWidth() + map.getTileWidth() / 2, map.getPosition().y + y * map.getTileHeight() + map.getTileHeight() / 2);
+				break;
+			}
+
+		}
+	}
+
+	this->radius = map.getTileWidth() /3;
 	canShoot = true; 
 	delay = 1;
 	time = delay;

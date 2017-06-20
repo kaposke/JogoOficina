@@ -23,6 +23,7 @@ public:
 	void behave(Map &map);
 
 	ofVec2f getPosition() const;
+	float getRadius() const;
 
 	void draw(ofVec2f &camera);
 

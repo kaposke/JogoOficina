@@ -70,6 +70,11 @@ ofVec2f Bullet::getPosition() const
 	return position;
 }
 
+float Bullet::getRadius() const
+{
+	return radius;
+}
+
 void Bullet::draw(ofVec2f & camera)
 {
 	if (isAlive)

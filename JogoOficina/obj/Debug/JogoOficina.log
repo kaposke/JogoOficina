@@ -1,5 +1,8 @@
-﻿  Camera.cpp
-  JogoOficina.vcxproj -> C:\Users\guilh\Documents\Visual Studio 2015\Projects\JogoOficina\JogoOficina\bin\JogoOficina_debug.exe
+﻿  LINK : bin\JogoOficina_debug.exe not found or not built by the last incremental link; performing full link
+     Creating library bin\JogoOficina_debug.lib and object bin\JogoOficina_debug.exp
+  JogoOficina.vcxproj -> C:\Users\guilh\Documents\Projetos Git\JogoOficina\JogoOficina\bin\JogoOficina_debug.exe
   JogoOficina.vcxproj -> bin\JogoOficina_debug.pdb (Full PDB)
   
-  	                   9	C:\Temp\of_v0.9.8_vs_release\export\vs\Win32\
+  	                   9	C:\Temp\of_v0.9.8_vs_release\export\vs\x64\
+  	  *Arquivo EXTRA		 1266176	C:\Users\guilh\Documents\Projetos Git\JogoOficina\JogoOficina\bin\fmodex.dll
+  	  *Arquivo EXTRA		 1312768	C:\Users\guilh\Documents\Projetos Git\JogoOficina\JogoOficina\bin\fmodexL.dll

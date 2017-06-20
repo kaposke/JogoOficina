@@ -17,7 +17,7 @@ private:
 	float delay;
 	float time;
 public:
-	Player();
+	Player(Map &map);
 	
 	void setPosition(float x, float y);
 	ofVec2f getPosition();
